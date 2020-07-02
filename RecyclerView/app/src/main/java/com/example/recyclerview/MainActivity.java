@@ -6,9 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -35,8 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<ExampleItem> exampleList = new ArrayList<>();
-        exampleList.add(new ExampleItem(R.drawable.ic_launcher_background, "Soumojyoti", "7477540554"));
-        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "7477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_background, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_background, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+        exampleList.add(new ExampleItem(R.drawable.ic_launcher_foreground, "Soumojyoti", "+917477540554"));
+
 
 
         mRecyclerView = findViewById(R.id.recyclerView);
@@ -45,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new ExampleAdapter(exampleList);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(this).color(Color.BLACK).build());
     }
 }
 
